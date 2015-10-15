@@ -1,0 +1,11 @@
+{
+  "id" : 1,
+  "school" : {
+    "name" : "yamabuki",
+    "location" : {
+      "lat" : 14.0,
+      "lon" : 15.0
+    }
+  },
+  "name" : "yuno"
+}

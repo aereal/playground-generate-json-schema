@@ -1,0 +1,10 @@
+{
+  "id" : 3,
+  "school" : {
+    "location" : {
+      "lat" : 14.0,
+      "lon" : 15.0
+    }
+  },
+  "name" : "sae"
+}
