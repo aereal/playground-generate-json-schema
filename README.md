@@ -37,7 +37,10 @@ Result:
             },
             "name" : {
                "example" : "yamabuki",
-               "type" : "null"
+               "type" : [
+                  "string",
+                  "null"
+               ]
             }
          },
          "type" : "object"
