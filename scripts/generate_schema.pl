@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use File::Slurp qw(read_file);
+use JSON::TypeInference::Type::Null;
 use JSON::TypeInference;
 use JSON::XS;
 
@@ -36,7 +37,7 @@ sub _object_property_descriptor {
 sub _atom_property_descriptor {
   my ($atom_type, $example_data) = @_;
   return +{
-    type    => $atom_type->name,
+    type => ($atom_type->isa('JSON::TypeInference::Type::Maybe') ? [ map { $_->name } ($atom_type->type, 'JSON::TypeInference::Type::Null') ] : $atom_type->name),
     example => $example_data,
   };
 }
